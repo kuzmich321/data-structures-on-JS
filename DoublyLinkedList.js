@@ -84,7 +84,7 @@ let DoublyLinkedList = (function () {
 
     DoublyLinkedList.prototype.removeAt = function(index) {
         let current = this.head
-        if (index < 0 || index > this.size) {
+        if (index < 0 || index >= this.size) {
             return false
         } else if (current === this.head && current === this.tail) {
             this.head = this.tail = null
