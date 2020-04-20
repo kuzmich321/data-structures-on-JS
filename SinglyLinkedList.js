@@ -68,8 +68,9 @@ let SinglyLinkedList = (function () {
         let current = this.head
         let prev
         let currentIndex = 0
-        if (index < 0 || index >= this.size) return false
-        if (index === 0) {
+        if (index < 0 || index >= this.size) {
+            return false
+        } else if (index === 0) {
             this.head = current.next
         } else {
             while (currentIndex < index) {
